@@ -34,7 +34,7 @@ export default function Login() {
       <div className="relative w-full max-w-md space-y-8">
         {/* Logo and Title */}
         <div className="text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#7ED957] to-[#5cb842] shadow-lg shadow-[#7ED957]/20">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center bg-gradient-to-br from-[#7ED957] to-[#5cb842] shadow-lg shadow-[#7ED957]/20">
             <Lock className="h-8 w-8 text-white" />
           </div>
           <h1 className="mt-6 text-3xl font-bold text-slate-50">
@@ -44,9 +44,9 @@ export default function Login() {
         </div>
 
         {/* Login Form */}
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6 rounded-xl bg-slate-900 border border-slate-800 p-8 shadow-2xl">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6 bg-slate-900 border border-slate-800 p-8 shadow-2xl">
           {error && (
-            <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-400">
+            <div className="bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-400">
               {error}
             </div>
           )}
@@ -62,7 +62,7 @@ export default function Login() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="block w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-500 focus:border-[#7ED957] focus:outline-none focus:ring-1 focus:ring-[#7ED957] transition-colors"
+                className="block w-full border border-slate-700 bg-slate-800 px-4 py-3 text-slate-100 placeholder-slate-500 focus:border-[#7ED957] focus:outline-none focus:ring-1 focus:ring-[#7ED957] transition-colors"
                 placeholder="admin@hande.com"
               />
             </div>
@@ -78,7 +78,7 @@ export default function Login() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 pr-12 text-slate-100 placeholder-slate-500 focus:border-[#7ED957] focus:outline-none focus:ring-1 focus:ring-[#7ED957] transition-colors"
+                  className="block w-full border border-slate-700 bg-slate-800 px-4 py-3 pr-12 text-slate-100 placeholder-slate-500 focus:border-[#7ED957] focus:outline-none focus:ring-1 focus:ring-[#7ED957] transition-colors"
                   placeholder="••••••••"
                 />
                 <button
@@ -99,7 +99,7 @@ export default function Login() {
                 type="checkbox"
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
-                className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-[#7ED957] focus:ring-[#7ED957] focus:ring-offset-slate-900"
+                className="h-4 w-4 border-slate-600 bg-slate-800 text-[#7ED957] focus:ring-[#7ED957] focus:ring-offset-slate-900"
               />
               <label htmlFor="remember-me" className="ml-2 block text-sm text-slate-400">
                 Remember me
@@ -114,7 +114,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-[#7ED957] px-4 py-3 font-semibold text-slate-900 hover:bg-[#6BC745] focus:outline-none focus:ring-2 focus:ring-[#7ED957] focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-[#7ED957] px-4 py-3 font-semibold text-slate-900 hover:bg-[#6BC745] focus:outline-none focus:ring-2 focus:ring-[#7ED957] focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? (
               <span className="flex items-center justify-center gap-2">
